@@ -1,11 +1,12 @@
 import exercise.DistancePoint;
+import exercise.Frequent;
 import exercise.Unique;
 import node.Node;
 import tuple.Tuple;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Timer;
 
 public class Main {
 
@@ -45,6 +46,25 @@ public class Main {
     DistancePoint distancePoint = new DistancePoint();
     Tuple tuple = distancePoint.moreCloseToOrigin(inputTuple);
     System.out.println("The point X:" + tuple.x + " Y:" + tuple.y + " is the closest to origin");
+
+    Frequent frequent = new Frequent();
+    // NOTE: The following input values are used for testing your solution.
+
+    // mostFrequent(array1) should return 1.
+    int[] array1 = {1, 3, 1, 3, 2, 1};
+    // mostFrequent(array2) should return 3.
+    int[] array2 = {3, 3, 1, 3, 2, 1};
+    // mostFrequent(array3) should return null.
+    int[] array3 = {};
+    // mostFrequent(array4) should return 0.
+    int[] array4 = {0};
+    // mostFrequent(array5) should return -1.
+    int[] array5 = {0, -1, 10, 10, -1, 10, -1, -1, -1, 1};
+
+    int[] data = new int[] {1, 3, 11, 11};
+
+    HashMap<Integer, Integer> result = frequent.mostFrequent(array5);
+    System.out.println("Result --- >>> " + result);
   }
 
 }
