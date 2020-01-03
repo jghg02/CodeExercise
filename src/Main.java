@@ -5,6 +5,7 @@ import node.Node;
 import tuple.Tuple;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -65,6 +66,20 @@ public class Main {
 
     HashMap<Integer, Integer> result = frequent.mostFrequent(array5);
     System.out.println("Result --- >>> " + result);
+
+
+    int[] array1A = {1, 3, 4, 6, 7, 9};
+    int[] array2A = {1, 2, 4, 5, 9, 10};
+    System.out.println("------ ------- >>> " + Arrays.toString(frequent.commonElements(array1A, array2A)));
+
+    int[] array1B = {1, 2, 9, 10, 11, 12};
+    int[] array2B = {0, 1, 2, 3, 4, 5, 8, 9, 10, 12, 14, 15};
+    System.out.println("------ ------- >>> " + Arrays.toString(frequent.commonElements(array1B, array2B)));
+
+    int[] array1C = {0, 1, 2, 3, 4, 5, 9, 10, 20, 30, 40, 45, 56, 60};
+    int[] array2C = {6, 7, 8, 9, 10, 11, 60};
+    System.out.println("------ ------- >>> " + Arrays.toString(frequent.commonElements(array1C, array2C)));
+
   }
 
 }

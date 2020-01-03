@@ -1,9 +1,11 @@
 package exercise;
 
-import java.util.Dictionary;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Frequent {
+
   public HashMap<Integer, Integer> mostFrequent(int[] data) {
 
     // Put all values into array with your numbers of occurents
@@ -34,6 +36,26 @@ public class Frequent {
 
     System.out.println("MAX_VALUE " + max_value);
     return result;
+  }
+
+  public Integer[] commonElements(int[] array1, int[] array2) {
+
+    List<Integer> commonValues = new ArrayList<Integer>();
+
+
+    for (int x = 0 ; x < array1.length ; x++) {
+      for (int y = 0 ; y < array2.length ; y++) {
+        if (array1[x] == array2[y]) {
+          commonValues.add(array1[x]);
+        }
+      }
+    }
+
+    Integer[] resultInArray = new Integer[commonValues.size()];
+    resultInArray = commonValues.toArray(resultInArray);
+
+    //return commonValues.stream().mapToInt(Integer::intValue).toArray();
+    return resultInArray;
   }
 
 }
