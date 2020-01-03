@@ -38,6 +38,8 @@ public class Frequent {
     return result;
   }
 
+  // Write a function that returns the common elements (as an array) between two sorted arrays of integers (ascending order)
+  // Example: The common elements between [1,2,3,5,6,7] and [1,3,7,8,9] are [1,3,7]
   public Integer[] commonElements(int[] array1, int[] array2) {
 
     List<Integer> commonValues = new ArrayList<Integer>();
