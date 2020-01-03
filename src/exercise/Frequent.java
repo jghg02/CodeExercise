@@ -45,8 +45,8 @@ public class Frequent {
     List<Integer> commonValues = new ArrayList<Integer>();
 
 
-    for (int x = 0 ; x < array1.length ; x++) {
-      for (int y = 0 ; y < array2.length ; y++) {
+    for (int x = 0; x < array1.length; x++) {
+      for (int y = 0; y < array2.length; y++) {
         if (array1[x] == array2[y]) {
           commonValues.add(array1[x]);
         }
@@ -58,6 +58,42 @@ public class Frequent {
 
     //return commonValues.stream().mapToInt(Integer::intValue).toArray();
     return resultInArray;
+  }
+
+  // Write a function that retursn ture if one array is a rotation of another
+  // NOTE: There are no duplicates in each of these arrays
+  // Example: [1,2,3,4,5,6,7] is a rotation of [4,5,6,7,1,2,3]
+  // contains the same elements in the same order but they start at different indices
+  public Boolean isRotation(int[] array1, int[] array2) {
+    if (array1.length != array2.length) {
+      return false;
+    }
+
+    int firstElement = array1[0];
+    int key_index = -1;
+
+    for (int x = 0; x < array2.length; x++) {
+      if (array2[x] == firstElement) {
+        // save the index to the first element
+        key_index = x;
+        break;
+      }
+    }
+
+    // after the loop of array2 the value of key_index is equal to -1
+    // that means we didn't find the key in array2
+    if (key_index == -1) {
+      return false;
+    }
+
+    for (int y = 0; y < array1.length; y++) {
+      int t = (key_index + y) % array1.length;
+      if (array1[y] != array2[t]) {
+        return false;
+      }
+    }
+
+    return true;
   }
 
 }

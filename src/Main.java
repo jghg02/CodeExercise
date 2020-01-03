@@ -80,6 +80,15 @@ public class Main {
     int[] array2C = {6, 7, 8, 9, 10, 11, 60};
     System.out.println("------ ------- >>> " + Arrays.toString(frequent.commonElements(array1C, array2C)));
 
+
+    int[] array1a = {1, 2, 3, 4, 5, 6, 7};
+    int[] array2a = {4, 5, 6, 7, 8, 1, 2, 3};
+    // isRotation(array1, array2a) should return false.
+    System.out.println("iaRotation ----> " + frequent.isRotation(array1a,array2a));
+
+    int[] array2b = {4, 5, 6, 7, 1, 2, 3};
+    // isRotation(array1, array2b) should return true.
+    System.out.println("iaRotation ----> " + frequent.isRotation(array1a,array2b));
   }
 
 }
