@@ -60,7 +60,7 @@ public class Frequent {
     return resultInArray;
   }
 
-  // Write a function that retursn ture if one array is a rotation of another
+  // Write a function that return true if one array is a rotation of another
   // NOTE: There are no duplicates in each of these arrays
   // Example: [1,2,3,4,5,6,7] is a rotation of [4,5,6,7,1,2,3]
   // contains the same elements in the same order but they start at different indices
@@ -87,6 +87,7 @@ public class Frequent {
     }
 
     for (int y = 0; y < array1.length; y++) {
+      //important
       int t = (key_index + y) % array1.length;
       if (array1[y] != array2[t]) {
         return false;
