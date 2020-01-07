@@ -94,6 +94,13 @@ public class Main {
 
     System.out.println("NON-REPETING ----> " + StringProblems.nonRepetingCharacter("abcab"));  // should return 'c'
 
+    System.out.println("-------- One Way Strings -------");
+
+    //System.out.println("Result for aaa and abc " + StringProblems.isOneWay("aaa","abc"));
+    System.out.println("Result for abcde and abde " + StringProblems.isOneWay("abcde","abde"));
+    //System.out.println("Result for abc and abcde " + StringProblems.isOneWay("abc","abcde"));
+    //System.out.println("Result for abc and abcde " + StringProblems.isOneWay("abc","abcde"));
+
   }
 
 }
