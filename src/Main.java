@@ -1,6 +1,7 @@
 import exercise.DistancePoint;
 import exercise.Frequent;
 import exercise.StringProblems;
+import exercise.TwoDimensionalArrays;
 import exercise.Unique;
 import node.Node;
 import tuple.Tuple;
@@ -97,9 +98,16 @@ public class Main {
     System.out.println("-------- One Way Strings -------");
 
     //System.out.println("Result for aaa and abc " + StringProblems.isOneWay("aaa","abc"));
-    System.out.println("Result for abcde and abde " + StringProblems.isOneWay("abcde","abde"));
+    System.out.println("Result for abcde and abde " + StringProblems.isOneWay("abcde", "abde"));
     //System.out.println("Result for abc and abcde " + StringProblems.isOneWay("abc","abcde"));
     //System.out.println("Result for abc and abcde " + StringProblems.isOneWay("abc","abcde"));
+
+    int[][] bombs1 = {{0, 2}, {2, 0}};
+    System.out.println("Array --- " + TwoDimensionalArrays.mineSweeper(bombs1, 3, 3));
+    // mineSweeper(bombs1, 3, 3) should return:
+    // [[0, 1, -1],
+    //  [1, 21, 1],
+    //  [-1, 1, 0]]
 
   }
 
