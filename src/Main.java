@@ -109,6 +109,12 @@ public class Main {
     //  [1, 21, 1],
     //  [-1, 1, 0]]
 
+    int a1[][] = {{1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}};
+
+    System.out.println("Rotate Array 90 degrees -> " + TwoDimensionalArrays.rotate(a1,3));
+
   }
 
 }
